@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://127.0.0.1:5647/WAHA-SLFNHA_demography.Rmd -->
+<html data-lt-installed="true" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <script type="application/shiny-singletons"></script>
+  <script type="application/html-dependencies">jquery[3.6.0];shiny-css[1.7.1];shiny-javascript[1.7.1]</script>
+<script src="./WAHA-SLFNHA_demography_files/jquery.min.js"></script><script>(function(){class RuffleMimeType{constructor(a,b,c){this.type=a,this.description=b,this.suffixes=c}}class RuffleMimeTypeArray{constructor(a){this.__mimetypes=[],this.__named_mimetypes={};for(let b of a)this.install(b)}install(a){let b=this.__mimetypes.length;this.__mimetypes.push(a),this.__named_mimetypes[a.type]=a,this[a.type]=a,this[b]=a}item(a){return this.__mimetypes[a]}namedItem(a){return this.__named_mimetypes[a]}get length(){return this.__mimetypes.length}}class RufflePlugin extends RuffleMimeTypeArray{constructor(a,b,c,d){super(d),this.name=a,this.description=b,this.filename=c}install(a){a.enabledPlugin||(a.enabledPlugin=this),super.install(a)}}class RufflePluginArray{constructor(a){this.__plugins=[],this.__named_plugins={};for(let b of a)this.install(b)}install(a){let b=this.__plugins.length;this.__plugins.push(a),this.__named_plugins[a.name]=a,this[a.name]=a,this[b]=a}item(a){return this.__plugins[a]}namedItem(a){return this.__named_plugins[a]}get length(){return this.__plugins.length}}const FLASH_PLUGIN=new RufflePlugin("Shockwave Flash","Shockwave Flash 32.0 r0","ruffle.js",[new RuffleMimeType("application/futuresplash","Shockwave Flash","spl"),new RuffleMimeType("application/x-shockwave-flash","Shockwave Flash","swf"),new RuffleMimeType("application/x-shockwave-flash2-preview","Shockwave Flash","swf"),new RuffleMimeType("application/vnd.adobe.flash-movie","Shockwave Flash","swf")]);function install_plugin(a){navigator.plugins.install||Object.defineProperty(navigator,"plugins",{value:new RufflePluginArray(navigator.plugins),writable:!1}),navigator.plugins.install(a),0<a.length&&!navigator.mimeTypes.install&&Object.defineProperty(navigator,"mimeTypes",{value:new RuffleMimeTypeArray(navigator.mimeTypes),writable:!1});for(var b=0;b<a.length;b+=1)navigator.mimeTypes.install(a[b])}install_plugin(FLASH_PLUGIN);})();</script><script src="chrome-extension://donbcfbmhbcapadipfkeojnmajbakjdc/dist/ruffle.js?id=34644087375"></script>
+<link href="./WAHA-SLFNHA_demography_files/shiny.min.css" rel="stylesheet">
+<script src="./WAHA-SLFNHA_demography_files/shiny.min.js"></script>  <script src="./WAHA-SLFNHA_demography_files/rmd_loader.js"></script>
+  <link href="./WAHA-SLFNHA_demography_files/rmd_loader.css" rel="stylesheet">
+<script src="./WAHA-SLFNHA_demography_files/header-attrs.js"></script><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" type="text/css" href="./WAHA-SLFNHA_demography_files/bootstrap.min.css"><script src="./WAHA-SLFNHA_demography_files/bootstrap.min.js"></script><script src="./WAHA-SLFNHA_demography_files/html5shiv.min.js"></script><script src="./WAHA-SLFNHA_demography_files/respond.min.js"></script><style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style><script src="./WAHA-SLFNHA_demography_files/tabsets.js"></script><link rel="stylesheet" type="text/css" href="./WAHA-SLFNHA_demography_files/default.css"><script src="./WAHA-SLFNHA_demography_files/highlight.js"></script><link rel="stylesheet" type="text/css" href="./WAHA-SLFNHA_demography_files/rmd_perf.css"><script src="./WAHA-SLFNHA_demography_files/rmd_perf.js"></script><meta name="rstudio_origin" content="127.0.0.1:21479"><script src="./WAHA-SLFNHA_demography_files/rsiframe.js"></script>
+
+
+<meta name="generator" content="pandoc">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+
+
+
+
+<title>WAHA-SLFNHA_demography</title>
+
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type="text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+<script type="text/javascript" src="./WAHA-SLFNHA_demography_files/MathJax.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+<body class="vsc-initialized" data-new-gr-c-s-check-loaded="14.1043.0" data-gr-ext-installed=""><div id="MathJax_Message" style="display: none;"></div>
+  <div>
+    <div data-display-if="!output.__reactivedoc__" data-ns-prefix="" style="display: none;">
+      <div id="rmd_loader_wrapper">
+        <div id="rmd_loader" style="">
+          <p>Please wait...</p>
+          <img src="./WAHA-SLFNHA_demography_files/rmd_loader.gif">
+        </div>
+      </div>
+    </div>
+    <div id="__reactivedoc__" class="shiny-html-output shiny-bound-output" aria-live="polite">
+
+
+
+
+
+
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div id="section-header">
+
+
+
+<h1 class="title toc-ignore">WAHA-SLFNHA_demography</h1>
+
+</div>
+
+
+<div id="section-introduction" class="section level1">
+<h1>Introduction</h1>
+<p>Code for visualization of First Nations communities served by the Weeneebayko Area Health Authority (WAHA) and the Sioux Lookout First Nations Health Authority (SLFNHA). All data is compiled from the 2016 Canadian Census.</p>
+<div id="section-data-processing" class="section level2">
+<h2>Data Processing</h2>
+<div id="section-load-packages" class="section level3">
+<h3>Load packages</h3>
+<pre class="r"><code class="hljs"><span class="hljs-keyword">library</span>(dplyr)
+<span class="hljs-keyword">library</span>(tmap)
+<span class="hljs-keyword">library</span>(sf)
+<span class="hljs-keyword">library</span>(cancensus)
+<span class="hljs-keyword">library</span>(here)
+<span class="hljs-keyword">library</span>(stringr)
+<span class="hljs-keyword">library</span>(rgdal)
+<span class="hljs-keyword">library</span>(ggplot2)
+<span class="hljs-keyword">library</span>(shiny)
+
+<span class="hljs-comment"># load API key for Cancensus. Replace with custom</span>
+api_key &lt;- readr::read_file(here(<span class="hljs-string">"census_api.txt"</span>))
+options(cancensus.api_key = api_key)</code></pre>
+</div>
+<div id="section-process-data" class="section level3">
+<h3>Process Data</h3>
+<div id="section-retrieving-sgc-of-communities-served" class="section level4">
+<h4>Retrieving SGC of communities served</h4>
+<pre class="r"><code class="hljs"><span class="hljs-comment"># list of communities served by WAHA</span>
+waha_com &lt;- data.frame(communities = c(<span class="hljs-string">"Attawapiskat"</span>, <span class="hljs-string">"Fort Albany"</span>, <span class="hljs-string">"Kashechewan"</span>, <span class="hljs-string">"Moosonee"</span>, <span class="hljs-string">"Peawanuck"</span>, <span class="hljs-string">"Moose Factory"</span>))
+
+<span class="hljs-comment"># list of communities served by SLFNHA</span>
+slf_com &lt;- read.delim(here(<span class="hljs-string">"slf_com.txt"</span>), header = <span class="hljs-literal">F</span>)
+
+<span class="hljs-comment"># import in Standard Geographical Classification (SGC) 2016 from https://www.statcan.gc.ca/en/subjects/standard/sgc/2016/index</span>
+sgc &lt;- read.csv(here(<span class="hljs-string">"SGC-CGT-2016-Element-eng.csv"</span>))
+<span class="hljs-comment">## rename</span>
+names(sgc) &lt;- c(<span class="hljs-string">"level"</span>, <span class="hljs-string">"Code"</span>, <span class="hljs-string">"Title"</span>, <span class="hljs-string">"Element"</span>, <span class="hljs-string">"Name"</span>)
+<span class="hljs-comment">## remove trailing white space</span>
+sgc$Name &lt;- trimws(sgc$Name)
+<span class="hljs-comment">## process sgc to remove numbers after name</span>
+sgc$Name2 &lt;- trimws(gsub(<span class="hljs-string">"\\d+.*"</span>, <span class="hljs-string">""</span>, sgc$Name))
+
+<span class="hljs-comment"># filter by communities. Remove unorganized given those contain larger aggregated data. Kashechewan grouped under Fort Albany</span>
+waha_sgc &lt;- sgc %&gt;% 
+  filter(Name2 %<span class="hljs-keyword">in</span>% waha_com$communities) %&gt;% 
+  filter(!(grepl(<span class="hljs-string">"Unorganized"</span>, Title))) %&gt;% 
+  filter(!duplicated(Code))
+
+<span class="hljs-comment"># for SLFNHA, multiple locations in ontario for a single name. Calculate mean string distance and select the location with closest string match.</span>
+slf_sgc &lt;- sgc %&gt;% 
+  filter(Name2 %<span class="hljs-keyword">in</span>% slf_com$V1) %&gt;% 
+  filter(!(grepl(<span class="hljs-string">"Unorganized"</span>, Title))) %&gt;% 
+  filter(substr(Code, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>) == <span class="hljs-number">3</span>)
+<span class="hljs-comment">### function to calculate distance between Title and Name</span>
+slf_sgc$str_diff &lt;- mapply(<span class="hljs-keyword">function</span>(x,y) mean(adist(c(x, y), counts = <span class="hljs-literal">T</span>)), slf_sgc$Title, slf_sgc$Name)
+<span class="hljs-comment">### select the locations lowest string difference. 23 communities found with geo code.</span>
+slf_sgc &lt;- slf_sgc %&gt;% 
+  dplyr::group_by(Name2) %&gt;% 
+  dplyr::arrange(str_diff, .by_group = <span class="hljs-literal">T</span>) %&gt;% 
+  dplyr::slice(<span class="hljs-number">1</span>) %&gt;% 
+  dplyr::ungroup()
+
+<span class="hljs-comment"># what are they? These have data on census. No info on Koocheching </span>
+slf_com$V1[!(slf_com$V1 %<span class="hljs-keyword">in</span>% slf_sgc$Name2)]</code></pre>
+<pre><code class="hljs">## [1] "Keewaywin"       "Koocheching"     "Mishkeegogamang"</code></pre>
+</div>
+</div>
+<div id="section-retrieving-census-data" class="section level3">
+<h3>Retrieving Census data</h3>
+<pre class="r"><code class="hljs">waha_census &lt;- get_census(dataset = <span class="hljs-string">"CA16"</span>,
+           regions = list(CSD = waha_sgc$Code),
+           level = <span class="hljs-string">"CSD"</span>,
+           vectors = c(<span class="hljs-string">"v_CA16_401"</span>, <span class="hljs-string">"v_CA16_404"</span>, <span class="hljs-string">"v_CA16_406"</span>, <span class="hljs-string">"v_CA16_407"</span>,
+                       <span class="hljs-string">"v_CA16_4"</span>, <span class="hljs-string">"v_CA16_61"</span>,<span class="hljs-string">"v_CA16_244"</span>, <span class="hljs-string">"v_CA16_379"</span>, <span class="hljs-string">"v_CA16_425"</span>, <span class="hljs-string">"v_CA16_512"</span>),
+           geo_format = <span class="hljs-string">"sf"</span>)
+
+slf_census &lt;- get_census(dataset = <span class="hljs-string">"CA16"</span>,
+           regions = list(CSD = slf_sgc$Code),
+           level = <span class="hljs-string">"CSD"</span>,
+           vectors = c(<span class="hljs-string">"v_CA16_401"</span>, <span class="hljs-string">"v_CA16_404"</span>, <span class="hljs-string">"v_CA16_406"</span>, <span class="hljs-string">"v_CA16_407"</span>,
+                       <span class="hljs-string">"v_CA16_4"</span>, <span class="hljs-string">"v_CA16_61"</span>,<span class="hljs-string">"v_CA16_244"</span>, <span class="hljs-string">"v_CA16_379"</span>, <span class="hljs-string">"v_CA16_425"</span>, <span class="hljs-string">"v_CA16_512"</span>),
+           geo_format = <span class="hljs-string">"sf"</span>)</code></pre>
+</div>
+</div>
+</div>
+<div id="section-edit-census-info" class="section level1">
+<h1>Edit census info</h1>
+<p>Moose factory has a population of 0. Hence, need to correct to the data for Designated Location Moose Factory South. McDowell Lake is also designated as having 0 population. The community, in fact, has 59. <a href="https://kochiefs.ca/mcdowell_lake" class="uri">https://kochiefs.ca/mcdowell_lake</a></p>
+<pre class="r"><code class="hljs"><span class="hljs-comment"># process moose factory data</span>
+moose_factory.df &lt;- read.csv(here(<span class="hljs-string">"census_ind/moosefactory_geography.csv"</span>), header = <span class="hljs-literal">F</span>)
+
+var_ls &lt;- c(<span class="hljs-string">"Population; 2016"</span>, <span class="hljs-string">"Total private dwellings"</span>, <span class="hljs-string">"Population density per square kilometre"</span>, <span class="hljs-string">"Land area in square kilometres"</span>, <span class="hljs-string">"Average household size"</span>, <span class="hljs-string">"  0 to 14 years"</span>, <span class="hljs-string">"  15 to 64 years"</span>,  <span class="hljs-string">"  65 years and over"</span>, <span class="hljs-string">"Average age of the population"</span>, <span class="hljs-string">"Total - Knowledge of official languages for the total population excluding institutional residents - 100% data"</span>)
+
+names(moose_factory.df) &lt;- c(<span class="hljs-string">"Characteristics"</span>, <span class="hljs-string">"Note"</span>, <span class="hljs-string">"Total"</span>,    <span class="hljs-string">"Flag_Total"</span>,   <span class="hljs-string">"Male"</span>, <span class="hljs-string">"Flag_Male"</span>,    <span class="hljs-string">"Female"</span>)
+
+moose_factory.df &lt;- moose_factory.df %&gt;% 
+  filter(Characteristics %<span class="hljs-keyword">in</span>% var_ls) %&gt;% 
+  filter(!duplicated(Characteristics)) %&gt;% 
+  select(Characteristics, Total)
+
+moose_factory.df2 &lt;- data.frame(t(moose_factory.df[,-<span class="hljs-number">1</span>]))
+names(moose_factory.df2) &lt;- moose_factory.df$Characteristics
+moose_factory.df2 &lt;- moose_factory.df2[,c(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">9</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">10</span>)]
+names(moose_factory.df2) &lt;- names(waha_census)[<span class="hljs-number">13</span>:<span class="hljs-number">22</span>]
+moose_factory.df2$name &lt;- <span class="hljs-string">"Moose Factory"</span>
+
+moose_factory.df2$geometry &lt;- waha_census$geometry[waha_census$name == <span class="hljs-string">"Moose Factory 68 (IRI)"</span>]
+moose_factory.sf &lt;- st_as_sf(moose_factory.df2)
+
+waha_census2 &lt;- rbind(waha_census[c(<span class="hljs-number">9</span>, <span class="hljs-number">13</span>:<span class="hljs-number">22</span>)], moose_factory.sf) 
+
+<span class="hljs-comment"># remove original moose factory data</span>
+waha_census2 &lt;- waha_census2[-c(<span class="hljs-number">2</span>),]</code></pre>
+<p>Manually change McDowell Lake population</p>
+<pre class="r"><code class="hljs">slf_census$`v_CA16_401: Population, 2016`[[<span class="hljs-number">30</span>]] &lt;- <span class="hljs-number">59</span>
+slf_census2 &lt;- slf_census[c(<span class="hljs-number">9</span>,<span class="hljs-number">13</span>:<span class="hljs-number">22</span>)]</code></pre>
+</div>
+<div id="section-prepare-for-plotting" class="section level1">
+<h1>prepare for plotting</h1>
+<pre class="r"><code class="hljs"><span class="hljs-comment"># get centroid (polygons too small)</span>
+waha_cent &lt;- st_centroid(waha_census2)</code></pre>
+<pre><code class="hljs">## Warning in st_centroid.sf(waha_census2): st_centroid assumes attributes are
+## constant over geometries of x</code></pre>
+<pre class="r"><code class="hljs">slf_cent &lt;- st_centroid(slf_census)</code></pre>
+<pre><code class="hljs">## Warning in st_centroid.sf(slf_census): st_centroid assumes attributes are
+## constant over geometries of x</code></pre>
+<pre class="r"><code class="hljs"><span class="hljs-comment"># become nuermic</span>
+waha_census2$`v_CA16_401: Population, 2016` &lt;- as.numeric(waha_census2$`v_CA16_401: Population, 2016`)
+
+<span class="hljs-comment">#</span>
+slf_census2$health &lt;- <span class="hljs-string">"SLFNHA"</span>
+waha_census2$health &lt;- <span class="hljs-string">"WAHA"</span>
+waha_slf.census2 &lt;- rbind(slf_census2, waha_census2)
+waha_slf.census2 &lt;- waha_slf.census2 %&gt;% 
+  mutate_at(c(<span class="hljs-number">2</span>:<span class="hljs-number">11</span>), as.numeric)</code></pre>
+<pre class="r"><code class="hljs">world_vars &lt;- names(st_drop_geometry(waha_slf.census2[<span class="hljs-number">2</span>:<span class="hljs-number">11</span>]))
+
+ui &lt;- fluidPage(
+  tmapOutput(<span class="hljs-string">"map"</span>),
+  selectInput(<span class="hljs-string">"var"</span>, <span class="hljs-string">"Variable"</span>, world_vars)
+)
+
+server &lt;- <span class="hljs-keyword">function</span>(input, output, session) {
+  output$map &lt;- renderTmap({
+    tm_shape(waha_slf.census2) +
+  tm_dots(col = input$var, size = input$var,id = c(<span class="hljs-string">"name"</span>),
+popup.vars = c(<span class="hljs-string">"Health Authority:"</span> = <span class="hljs-string">"health"</span>,
+               <span class="hljs-string">"Variable:"</span> = input$var), title = <span class="hljs-string">"Variable"</span>)
+  })
+}   
+
+
+shinyApp(ui, server,  options = list(height = <span class="hljs-number">800</span>))</code></pre>
+<p><iframe width="100%" height="800" class="shiny-frame" src="./WAHA-SLFNHA_demography_files/saved_resource.html" data-ruffle-polyfilled=""></iframe></p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("section-TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "mathjax-local/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+
+</div>
+  </div>
+
+
+<script>mendeleyWebImporter = {
+  downloadPdfs(e,t) { return this._call('downloadPdfs', [e,t]); },
+  open() { return this._call('open', []); },
+  setLoginToken(e) { return this._call('setLoginToken', [e]); },
+  _call(methodName, methodArgs) {
+    const id = Math.random();
+    window.postMessage({ id, token: '0.2605908513612174', methodName, methodArgs }, 'http://127.0.0.1:5647');
+    return new Promise(resolve => {
+      const listener = window.addEventListener('message', event => {
+        const data = event.data;
+        if (typeof data !== 'object' || !('result' in data) || data.id !== id) return;
+        window.removeEventListener('message', listener);
+        resolve(data.result);
+      });
+    });
+  }
+};</script></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
