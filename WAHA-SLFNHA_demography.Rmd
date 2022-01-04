@@ -1,6 +1,11 @@
 ---
 title: "WAHA-SLFNHA_demography"
-output: html_document
+output:
+  html_document:
+    toc: true
+    self_contained: true
+      github_document:
+    toc: true
 runtime: shiny
 ---
 # Introduction
