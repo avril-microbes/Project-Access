@@ -1,0 +1,228 @@
+"Keewaywin First Nation [First Nation/Indian band or Tribal Council area], Ontario"
+"Topic","Characteristics","Note","Total_Aboriginal_household_status(1)","Flag_Total_Aboriginal_household_status","Aboriginal_household","Flag_Aboriginal_household","Non-Aboriginal_household(3)","Flag_Non-Aboriginal_household"
+"Tenure","Total - Private households by tenure - 25% sample data",2,90,,85,,0,
+"Tenure","  Owner",,10,,10,,0,
+"Tenure","  Renter",,0,,10,,0,
+"Tenure","  Band housing",,85,,85,,0,
+"Condominium status","Total - Occupied private dwellings by condominium status - 25% sample data",3,90,,85,,0,
+"Condominium status","  Condominium",,0,,0,,0,
+"Condominium status","  Not condominium",,85,,90,,0,
+"Number of bedrooms","Total - Occupied private dwellings by number of bedrooms - 25% sample data",4,90,,85,,0,
+"Number of bedrooms","  No bedrooms",,0,,0,,0,
+"Number of bedrooms","  1 bedroom",,10,,15,,0,
+"Number of bedrooms","  2 bedrooms",,10,,10,,0,
+"Number of bedrooms","  3 bedrooms",,60,,60,,0,
+"Number of bedrooms","  4 or more bedrooms",,15,,15,,0,
+"Number of rooms","Total - Occupied private dwellings by number of rooms - 25% sample data",5,90,,90,,0,
+"Number of rooms","  1 to 4 rooms",,15,,15,,0,
+"Number of rooms","  5 rooms",,45,,45,,0,
+"Number of rooms","  6 rooms",,20,,20,,0,
+"Number of rooms","  7 rooms",,10,,10,,0,
+"Number of rooms","  8 or more rooms",,0,,0,,0,
+"Number of rooms","Average number of rooms per dwelling",,5.1,,5.1,,0,
+"Number of persons per room","Total - Private households by number of persons per room - 25% sample data",6,85,,90,,0,
+"Number of persons per room","  One person or fewer per room",,60,,60,,0,
+"Number of persons per room","  More than 1 person per room",,25,,30,,0,
+"Housing suitability","Total - Private households by housing suitability - 25% sample data",7,90,,90,,0,
+"Housing suitability","  Suitable",,55,,55,,0,
+"Housing suitability","  Not suitable",,35,,30,,0,
+"Period of construction","Total - Occupied private dwellings by period of construction - 25% sample data",8,90,,90,,0,
+"Period of construction","  1960 or before",,0,,0,,0,
+"Period of construction","  1961 to 1980",,0,,0,,0,
+"Period of construction","  1981 to 1990",,10,,0,,0,
+"Period of construction","  1991 to 2000",,30,,30,,0,
+"Period of construction","  2001 to 2005",,0,,0,,0,
+"Period of construction","  2006 to 2010",,20,,20,,0,
+"Period of construction","  2011 to 2016",9,20,,20,,0,
+"Dwelling condition","Total - Occupied private dwellings by dwelling condition - 25% sample data",10,85,,85,,0,
+"Dwelling condition","  Only regular maintenance or minor repairs needed",,45,,40,,0,
+"Dwelling condition","  Major repairs needed",,45,,45,,0,
+"Number of household maintainers","Total - Private households by number of household maintainers - 25% sample data",11,90,,90,,0,
+"Number of household maintainers","  1 household maintainer",,70,,70,,0,
+"Number of household maintainers","  2 household maintainers",,15,,15,,0,
+"Number of household maintainers","  3 or more household maintainers",,0,,10,,0,
+"Age of primary household maintainers","Total - Private households by age of primary household maintainers - 25% sample data",12,90,,85,,0,
+"Age of primary household maintainers","  15 to 24 years",,0,,10,,0,
+"Age of primary household maintainers","  25 to 34 years",,15,,20,,0,
+"Age of primary household maintainers","  35 to 44 years",,25,,25,,0,
+"Age of primary household maintainers","  45 to 54 years",,15,,20,,0,
+"Age of primary household maintainers","  55 to 64 years",,15,,15,,0,
+"Age of primary household maintainers","  65 to 74 years",,10,,0,,0,
+"Age of primary household maintainers","  75 to 84 years",,0,,0,,0,
+"Age of primary household maintainers","  85 years and over",,0,,0,,0,
+"Shelter-cost-to-income ratio","Total -  Owner and tenant households with household total income greater than zero, in non-farm, non-reserve private dwellings by shelter-cost-to-income ratio - 25% sample data",13,0,,0,,0,
+"Shelter-cost-to-income ratio","  Spending less than 30% of income on shelter costs",,0,,0,,0,
+"Shelter-cost-to-income ratio","  Spending 30% or more of income on shelter costs",,0,,0,,0,
+"Shelter-cost-to-income ratio","    30% to less than 100%",,0,,0,,0,
+"Number of owner households in non-farm, non-reserve private dwellings","Total - Owner households in non-farm, non-reserve private dwellings - 25% sample data",,0,,0,,0,
+"Number of owner households in non-farm, non-reserve private dwellings","  % of owner households with a mortgage",14,0,,0,,0,
+"Number of owner households in non-farm, non-reserve private dwellings","  % of owner households spending 30% or more of its income on shelter costs",15,0,,0,,0,
+"Number of owner households in non-farm, non-reserve private dwellings","  Median monthly shelter costs for owned dwellings ($)",16,0,,0,,0,
+"Number of owner households in non-farm, non-reserve private dwellings","  Average monthly shelter costs for owned dwellings ($)",17,0,,0,,0,
+"Number of owner households in non-farm, non-reserve private dwellings","  Median value of dwellings ($)",18,0,,0,,0,
+"Number of owner households in non-farm, non-reserve private dwellings","  Average value of dwellings ($)",19,0,,0,,0,
+"Number of tenant households in non-farm, non-reserve private dwellings","Total - Tenant households in non-farm, non-reserve private dwellings - 25% sample data",,0,,0,,0,
+"Number of tenant households in non-farm, non-reserve private dwellings","  % of tenant households in subsidized housing",20,0,,0,,0,
+"Number of tenant households in non-farm, non-reserve private dwellings","  % of tenant households spending 30% or more of its income on shelter costs",21,0,,0,,0,
+"Number of tenant households in non-farm, non-reserve private dwellings","  Median monthly shelter costs for rented dwellings ($)",22,0,,0,,0,
+"Number of tenant households in non-farm, non-reserve private dwellings","  Average monthly shelter costs for rented dwellings ($)",23,0,,0,,0,
+"Income statistics for private households","Total - Income statistics in 2015 for private households by household size - 25% sample data",24,90,,90,,0,
+"Income statistics for private households","  Median total income of households in 2015 ($)",,60992,,60992,,0,
+"Income statistics for private households","  Average total income of households in 2015 ($)",,58329,,58329,,0,
+"Income statistics for private households","  Median after-tax income of households in 2015 ($)",,60992,,60992,,0,
+"Income statistics for private households","  Average after-tax income of households in 2015 ($)",,58329,,58329,,0,
+"Income statistics for private households","    Total - Income statistics in 2015 for one-person private households - 25% sample data",,0,,0,,0,
+"Income statistics for private households","      Median total income of one-person households in 2015 ($)",,0,,0,,0,
+"Income statistics for private households","      Average total income of one-person households in 2015 ($)",,0,,0,,0,
+"Income statistics for private households","      Median after-tax income of one-person households in 2015 ($)",,0,,0,,0,
+"Income statistics for private households","      Average after-tax income of one-person households in 2015 ($)",,0,,0,,0,
+"Income statistics for private households","    Total - Income statistics in 2015 for two-or-more-person private households - 25% sample data",,80,,80,,0,
+"Income statistics for private households","      Median total income of two-or-more-person households in 2015 ($)",,64640,,64640,,0,
+"Income statistics for private households","      Average total income of two-or-more-person households in 2015 ($)",,61436,,61436,,0,
+"Income statistics for private households","      Median after-tax income of two-or-more-person households in 2015 ($)",,64640,,64640,,0,
+"Income statistics for private households","      Average after-tax income of two-or-more-person households in 2015 ($)",,61436,,61436,,0,
+"Household total income groups","Total - Household total income groups in 2015 for private households - 25% sample data",25,90,,85,,0,
+"Household total income groups","  Under $5,000",,0,,0,,0,
+"Household total income groups","  $5,000 to $9,999",,0,,10,,0,
+"Household total income groups","  $10,000 to $14,999",,0,,0,,0,
+"Household total income groups","  $15,000 to $19,999",,10,,10,,0,
+"Household total income groups","  $20,000 to $24,999",,0,,10,,0,
+"Household total income groups","  $25,000 to $29,999",,0,,10,,0,
+"Household total income groups","  $30,000 to $34,999",,10,,0,,0,
+"Household total income groups","  $35,000 to $39,999",,0,,10,,0,
+"Household total income groups","  $40,000 to $44,999",,0,,0,,0,
+"Household total income groups","  $45,000 to $49,999",,0,,10,,0,
+"Household total income groups","  $50,000 to $59,999",,10,,0,,0,
+"Household total income groups","  $60,000 to $69,999",,10,,10,,0,
+"Household total income groups","  $70,000 to $79,999",,10,,10,,0,
+"Household total income groups","  $80,000 to $89,999",,10,,10,,0,
+"Household total income groups","  $90,000 to $99,999",,10,,0,,0,
+"Household total income groups","  $100,000 and over",,10,,15,,0,
+"Household total income groups","    $100,000 to $124,999",,10,,10,,0,
+"Household total income groups","    $125,000 to $149,999",,0,,0,,0,
+"Household total income groups","    $150,000 to $199,999",,0,,0,,0,
+"Household total income groups","    $200,000 and over",,0,,0,,0,
+"Household after-tax income groups","Total - Household after-tax income groups in 2015 for private households - 25% sample data",26,85,,90,,0,
+"Household after-tax income groups","  Under $5,000",,0,,0,,0,
+"Household after-tax income groups","  $5,000 to $9,999",,0,,0,,0,
+"Household after-tax income groups","  $10,000 to $14,999",,10,,0,,0,
+"Household after-tax income groups","  $15,000 to $19,999",,10,,10,,0,
+"Household after-tax income groups","  $20,000 to $24,999",,10,,0,,0,
+"Household after-tax income groups","  $25,000 to $29,999",,10,,10,,0,
+"Household after-tax income groups","  $30,000 to $34,999",,0,,0,,0,
+"Household after-tax income groups","  $35,000 to $39,999",,0,,0,,0,
+"Household after-tax income groups","  $40,000 to $44,999",,10,,10,,0,
+"Household after-tax income groups","  $45,000 to $49,999",,0,,10,,0,
+"Household after-tax income groups","  $50,000 to $59,999",,0,,0,,0,
+"Household after-tax income groups","  $60,000 to $69,999",,10,,15,,0,
+"Household after-tax income groups","  $70,000 to $79,999",,10,,10,,0,
+"Household after-tax income groups","  $80,000 to $89,999",,10,,10,,0,
+"Household after-tax income groups","  $90,000 to $99,999",,10,,10,,0,
+"Household after-tax income groups","  $100,000 and over",,10,,10,,0,
+"Household after-tax income groups","    $100,000 to $124,999",,0,,10,,0,
+"Household after-tax income groups","    $125,000 to $149,999",,10,,0,,0,
+"Household after-tax income groups","    $150,000 and over",,0,,0,,0,
+
+Symbols:
+
+Notes:
+1, An Aboriginal household is either a non-family household in which at least 50 per cent of household members self-identified as Aboriginal people  or a family household that meets at least one of two criteria: (a) at least one married spouse  common-law partner  or lone parent self-identified as an Aboriginal person; or (b) at least 50 per cent of household members self-identified as Aboriginal people. An Aboriginal person is anybody identifying as an Aboriginal person (Question 18)  a member of an Indian Band/First Nation (Question 21)  or a Treaty Indian or Registered Indian (Question 20).
+2, Tenure - Refers to whether the household owns or rents their private dwelling. The private dwelling may be situated on rented or leased land or be part of a condominium. A household is considered to own their dwelling if some member of the household owns the dwelling even if it is not fully paid for  for example if there is a mortgage or some other claim on it. A household is considered to rent their dwelling if no member of the household owns the dwelling. A household is considered to rent that dwelling even if the dwelling is provided without cash rent or at a reduced rent  or if the dwelling is part of a cooperative.
+For historical and statutory reasons  shelter occupancy on Indian reserves or settlements does not lend itself to the usual classification by standard tenure categories. Therefore  a special category  band housing  has been created and is included in the classification of tenure.
+3, Condominium status - Refers to whether the private dwelling is part of a condominium development. A condominium is a residential complex in which dwellings are owned individually while land and common elements are held in joint ownership with others.
+4, Bedrooms - Refers to rooms in a private dwelling that are designed mainly for sleeping purposes even if they are now used for other purposes  such as guest rooms and television rooms. Also included are rooms used as bedrooms now  even if they were not originally built as bedrooms  such as bedrooms in a finished basement. Bedrooms exclude rooms designed for another use during the day such as dining rooms and living rooms even if they may be used for sleeping purposes at night. By definition  one-room private dwellings such as bachelor or studio apartments have zero bedrooms.
+5, Rooms - Refers to enclosed areas within a private dwelling which are finished and suitable for year-round living. The number of rooms of a private dwelling includes kitchens  bedrooms and finished rooms in the attic or basement. The number of rooms of a private dwelling excludes bathrooms  halls  vestibules and rooms used solely for business purposes. Partially divided rooms are considered to be separate rooms if they are considered as such by the respondent (e.g.  L-shaped dining-room and living-room arrangements).
+6, Persons per room - Refers to an indicator of the level of crowding in a private dwelling. It is calculated by dividing the number of persons in the household by the number of rooms in the dwelling.
+7, Housing suitability - Refers to whether a private household is living in suitable accommodations according to the National Occupancy Standard (NOS); that is  whether the dwelling has enough bedrooms for the size and composition of the household. A household is deemed to be living in suitable accommodations if its dwelling has enough bedrooms  as calculated using the NOS.
+Housing suitability and the National Occupancy Standard (NOS) on which it is based were developed by Canada Mortgage and Housing Corporation (CMHC) through consultations with provincial housing agencies.
+8, Period of construction - Refers to the period in time during which the building or dwelling was originally constructed. This refers to the period in which the building was completed  not the time of any later remodelling  additions or conversions.
+9, Includes data up to May 10  2016.
+10, Dwelling condition - Refers to whether the dwelling is in need of repairs. This does not include desirable remodelling or additions.
+11, Number of household maintainers - Refers to the number of persons of the same household who have been identified as household maintainers.
+A household maintainer is a person residing in the household who is responsible for paying the rent  or the mortgage  or the taxes  or the electricity or other services or utilities. Where a number of people may contribute to the payments  more than one person in the household may be identified as a household maintainer. If no person in the household is identified as making any such payments  the first person listed is selected by default.
+12, Primary household maintainer - The first person in the household identified as someone who pays the rent  or the mortgage  or the taxes  or the electricity or other services or utilities for the dwelling. When more than one member of the household contributes to the payments  the first person listed is chosen as the primary household maintainer. If no person in the household is identified as making any such payments  the first person listed is selected by default.
+The order of the persons in a household is determined by the order in which they are listed on the questionnaire. Generally  an adult is listed first followed  if applicable  by their spouse or common-law partner and then by their children. The order does not necessarily correspond to the proportion of household payments made by each person.
+13, Shelter-cost-to-income ratio - Refers to the proportion of average total income of household which is spent on shelter costs.
+Shelter-cost-to-income ratio is calculated for private households living in owned or rented dwellings who reported a total household income greater than zero.
+The relatively high shelter costs to household income ratios for some households may have resulted from the difference in the reference period for shelter costs and household total income data. The reference period for shelter cost data is 2016  while household total income is reported for the year 2015. As well  for some households  the 2015 household total income may represent income for only part of a year.
+For more information on household total income or shelter costs  refer to the Census Dictionary: Total income and Shelter cost.
+14, Presence of mortgage payments - Refers to whether an owner household makes regular mortgage or loan payments for their dwelling.
+15, Shelter-cost-to-income ratio refers to the proportion of average total income of household which is spent on shelter costs.
+Shelter-cost-to-income ratio is calculated for private households living in owned or rented dwellings who reported a total household income greater than zero. Private households living in band housing  located on an agricultural operation that is operated by a member of the household  and households who reported a zero or negative total household income are excluded.
+The relatively high shelter-costs-to-household income ratios for some households may have resulted from the difference in the reference period for shelter costs and household total income data. The reference period for shelter cost data is 2016  while household total income is reported for the year 2015. As well  for some households  the 2015 household total income may represent income for only part of a year.
+For more information on household total income  refer to the Census Dictionary: Total income.
+16, Shelter cost refers to the average monthly total of all shelter expenses paid by households that own or rent their dwelling.
+Shelter costs for owner households include  where applicable  mortgage payments  property taxes and condominium fees  along with the costs of electricity  heat  water and other municipal services. For renter households  shelter costs include  where applicable  the rent and the costs of electricity  heat  water and other municipal services.
+17, Shelter cost refers to the average monthly total of all shelter expenses paid by households that own or rent their dwelling.
+Shelter costs for owner households include  where applicable  mortgage payments  property taxes and condominium fees  along with the costs of electricity  heat  water and other municipal services. For renter households  shelter costs include  where applicable  the rent and the costs of electricity  heat  water and other municipal services.
+18, Value (owner estimated) of private dwelling - Refers to the dollar amount expected by the owner if the asset were to be sold.
+In the context of dwelling  it refers to the value of the entire dwelling  including the value of the land it is on and of any other structure  such as a garage  which is on the property. If the dwelling is located in a building which contains several dwellings  or a combination of residential and business premises  all of which the household owns  the value is estimated as a portion of the market value that applies only to the dwelling in which the household resides.
+19, Value (owner estimated) of private dwelling - Refers to the dollar amount expected by the owner if the asset were to be sold.
+In the context of dwelling  it refers to the value of the entire dwelling  including the value of the land it is on and of any other structure  such as a garage  which is on the property. If the dwelling is located in a building which contains several dwellings  or a combination of residential and business premises  all of which the household owns  the value is estimated as a portion of the market value that applies only to the dwelling in which the household resides.
+20, Subsidized housing - Refers to whether the dwelling is subsidized. Subsidized housing includes rent geared to income  social housing  public housing  government-assisted housing  non-profit housing  rent supplements and housing allowances.
+21, Shelter-cost-to-income ratio refers to the proportion of average total income of household which is spent on shelter costs.
+Shelter-cost-to-income ratio is calculated for private households living in owned or rented dwellings who reported a total household income greater than zero. Private households living in band housing  located on an agricultural operation that is operated by a member of the household  and households who reported a zero or negative total household income are excluded.
+The relatively high shelter costs to household income ratios for some households may have resulted from the difference in the reference period for shelter costs and household total income data. The reference period for shelter cost data is 2016  while household total income is reported for the year 2015. As well  for some households  the 2015 household total income may represent income for only part of a year.
+For more information on household total income  refer to the Census Dictionary: Total income.
+22, Shelter cost refers to the average monthly total of all shelter expenses paid by households that own or rent their dwelling.
+Shelter costs for owner households include  where applicable  mortgage payments  property taxes and condominium fees  along with the costs of electricity  heat  water and other municipal services. For renter households  shelter costs include  where applicable  the rent and the costs of electricity  heat  water and other municipal services.
+23, Shelter cost refers to the average monthly total of all shelter expenses paid by households that own or rent their dwelling.
+Shelter costs for owner households include  where applicable  mortgage payments  property taxes and condominium fees  along with the costs of electricity  heat  water and other municipal services. For renter households  shelter costs include  where applicable  the rent and the costs of electricity  heat  water and other municipal services.
+24, Total income - The sum of certain incomes (in cash and  in some circumstances  in kind) of the statistical unit during a specified reference period. The components used to calculate total income vary between:
+    *statistical units of social statistical programs such as persons  private households  census families and economic families;
+,    *statistical units of business statistical programs such as enterprises  companies  establishments and locations;
+,    *statistical units of farm statistical programs such as farm operator and farm family.
+,In the context of persons  total income refers to receipts from certain sources  before income taxes and deductions  during a specified reference period.
+In the context of census families  total income refers to receipts from certain sources of all of its family members  before income taxes and deductions  during a specified reference period.
+In the context of economic families  total income refers to receipts from certain sources of all of its family members  before income taxes and deductions  during a specified reference period.
+In the context of households  total income refers to receipts from certain sources of all household members  before income taxes and deductions  during a specified reference period.
+The monetary receipts included are those that tend to be of a regular and recurring nature. Receipts that are included as income are:
+    *employment income from wages  salaries  tips  commissions and net income from self-employment (for both unincorporated farm and non-farm activities);
+,    *income from investment sources  such as dividends and interest on bonds  accounts  guaranteed investment certificates (GICs) and mutual funds;
+,    *income from employer and personal pension sources  such as private pensions and payments from annuities and registered retirement income funds (RRIFs);
+,    *other regular cash income  such as child support payments received  spousal support payments (alimony) received and scholarships;
+,    *income from government sources  such as social assistance  child benefits  Employment Insurance benefits  Old Age Security benefits  Canada Pension Plan and Québec Pension Plan benefits and disability income.
+,Receipts excluded from this income definition are:
+    *one-time receipts  such as lottery winnings  gambling winnings  cash inheritances  lump-sum insurance settlements and tax-free savings account (TFSA) or registered retirement savings plan (RRSP) withdrawals;
+,    *capital gains because they are not by their nature regular and recurring. It is further assumed that they are more relevant to the concept of wealth than the concept of income;
+,    *employers' contributions to registered pension plans  Canada Pension Plan  Québec Pension Plan and Employment Insurance;
+,    *voluntary inter-household transfers  imputed rent  goods and services produced for barter and goods produced for own consumption.
+,After-tax income - Total income less income taxes of the statistical unit during a specified reference period. Income taxes refers to the sum of federal income taxes  provincial and territorial income taxes  less abatement where applicable. Provincial and territorial income taxes include health care premiums in certain jurisdictions. Abatement reduces the federal income taxes payable by persons residing in Quebec or in certain self-governing Yukon First Nation settlement lands.
+For the 2016 Census  the reference period is the calendar year 2015 for all income variables.
+Median income - The median income of a specified group is the amount that divides the income distribution of that group into two halves  i.e.  the incomes of half of the units in that group are below the median  while those of the other half are above the median. Median incomes of households are calculated for all units  whether or not they had income.
+Average income - Average income of a specified group is calculated by dividing the aggregate income of that group by the number of units in that group. Average incomes of households are calculated for all units  whether or not they had income.
+
+25, Total income - The sum of certain incomes (in cash and  in some circumstances  in kind) of the statistical unit during a specified reference period. The components used to calculate total income vary between:
+    *statistical units of social statistical programs such as persons  private households  census families and economic families;
+,    *statistical units of business statistical programs such as enterprises  companies  establishments and locations;
+,    *statistical units of farm statistical programs such as farm operator and farm family.
+,In the context of persons  total income refers to receipts from certain sources  before income taxes and deductions  during a specified reference period.
+In the context of census families  total income refers to receipts from certain sources of all of its family members  before income taxes and deductions  during a specified reference period.
+In the context of economic families  total income refers to receipts from certain sources of all of its family members  before income taxes and deductions  during a specified reference period.
+In the context of households  total income refers to receipts from certain sources of all household members  before income taxes and deductions  during a specified reference period.
+The monetary receipts included are those that tend to be of a regular and recurring nature. Receipts that are included as income are:
+    *employment income from wages  salaries  tips  commissions and net income from self-employment (for both unincorporated farm and non-farm activities);
+,    *income from investment sources  such as dividends and interest on bonds  accounts  guaranteed investment certificates (GICs) and mutual funds;
+,    *income from employer and personal pension sources  such as private pensions and payments from annuities and registered retirement income funds (RRIFs);
+,    *other regular cash income  such as child support payments received  spousal support payments (alimony) received and scholarships;
+,    *income from government sources  such as social assistance  child benefits  Employment Insurance benefits  Old Age Security benefits  Canada Pension Plan and Québec Pension Plan benefits and disability income.
+,Receipts excluded from this income definition are:
+    *one-time receipts  such as lottery winnings  gambling winnings  cash inheritances  lump-sum insurance settlements and tax-free savings account (TFSA) or registered retirement savings plan (RRSP) withdrawals;
+,    *capital gains because they are not by their nature regular and recurring. It is further assumed that they are more relevant to the concept of wealth than the concept of income;
+,    *employers' contributions to registered pension plans  Canada Pension Plan  Québec Pension Plan and Employment Insurance;
+,    *voluntary inter-household transfers  imputed rent  goods and services produced for barter and goods produced for own consumption.
+,For the 2016 Census  the reference period is the calendar year 2015 for all income variables.
+26, After-tax income - After-tax income refers to total income less income taxes of the statistical unit during a specified reference period. Income taxes refers to the sum of federal income taxes  provincial and territorial income taxes  less abatement where applicable. Provincial and territorial income taxes include health care premiums in certain jurisdictions. Abatement reduces the federal income taxes payable by persons residing in Quebec or in certain self-governing Yukon First Nation settlement lands.
+For the 2016 Census  the reference period is the calendar year 2015 for all income variables.
+
+Data quality:
+Keewaywin First Nation [First Nation/Indian band or Tribal Council area]; Ontario
+Global non-response rate (GNR)  long-form census questionnaire: 20.3%
+Data quality index showing a long-form income non-response rate higher than or equal to 20%  but lower than 30%.
+
+
+"Source: Statistics Canada, 2016 Census of Population."
+
+How to cite: Statistics Canada. 2018. Aboriginal Population Profile. 2016 Census.
+Statistics Canada Catalogue no. 98-510-X2016001. Ottawa. Released July 18 2018.
+http://www12.statcan.gc.ca/census-recensement/2016/dp-pd/abpopprof/index.cfm?Lang=E
