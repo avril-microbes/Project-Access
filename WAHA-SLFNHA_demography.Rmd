@@ -1,12 +1,8 @@
 ---
 title: "WAHA-SLFNHA_demography"
-output:
-  html_document:
-    toc: true
-    self_contained: true
-      github_document:
-    toc: true
+output: html_document
 runtime: shiny
+self_contained: true
 ---
 # Introduction
 Code for visualization of First Nations communities served by the Weeneebayko Area Health Authority (WAHA) and the Sioux Lookout First Nations Health Authority (SLFNHA). All data is compiled from the 2016 Canadian Census.
