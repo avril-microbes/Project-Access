@@ -149,7 +149,9 @@ waha_slf.census4[c(35), c(31:36)] <- c(144,	"Mushkegowuk Council",	"Nishnawbe-As
 waha_slf.census4[c(36), c(31:36)] <- c(144,	"Mushkegowuk Council",	"Nishnawbe-Aski Nation",	"Treaty 9",	51.261269,	-80.59536)
 waha_slf.census4[40, c(31:36)] <- c(146,	"Mushkegowuk Council",	"Nishnawbe-Aski Nation",	"Treaty 9",	55.0108,	-85.423164)
 
-write_sf(waha_slf.census4, here("comparative", "waha_slf_census4.shp"))
+# write_sf(waha_slf.census4, here("comparative", "waha_slf_census4.shp"))
+
+# write.csv(waha_slf.census4, here("comparative", "waha_slf_census4.csv"))
 ```
 
 # Generate bounding box for the 2 health authorities (Tribal Council)
@@ -181,7 +183,7 @@ tm_shape(st_as_sf(waha_slf.census4)) +
 
 # visualize demographic differences
 ```{r}
-world_vars <- names(st_drop_geometry(waha_slf.census4[c(8,12:21, 29,30)]))
+world_vars <- names(st_drop_geometry(waha_slf.census2[c(8,12:21, 29,30)]))
 
 ui <- fluidPage(
   tmapOutput("map"),
@@ -215,23 +217,23 @@ shinyApp(ui, server,  options = list(height = 800))
 ## Visualizing demography differences
 ```{r}
 # filter out region with no population data
-waha_slf.census3 <- waha_slf.census2 %>% filter(Population != 0) %>%
+waha_slf.census5 <- waha_slf.census2 %>% filter(Population != 0) %>%
   st_drop_geometry()
 
 # rename variables 
-names(waha_slf.census3) <- gsub(".*: ", "", names(waha_slf.census3))
+names(waha_slf.census5) <- gsub(".*: ", "", names(waha_slf.census5))
 
 # gather
-waha_slf.census4 <- waha_slf.census3 %>% 
+waha_slf.census6 <- waha_slf.census5 %>% 
   tidyr::gather(key, value, -health) %>% 
-  filter(key %in% names(waha_slf.census3)[12:29])
+  filter(key %in% names(waha_slf.census5)[12:29])
 
-waha_slf.census3$`Population, 2016`
+waha_slf.census5$`Population, 2016`
 # filter variables that are more interesting
 var_int <- c("Population, 2016", "Population density per square kilometre", "Major repairs needed (%)", "Overcrowded (%)", "0 to 14 years", "65 years and over")
 
 # Violine plot with overlaid points
-waha_slf.census4 %>% 
+waha_slf.census6 %>% 
   filter(key %in% var_int) %>% 
   ggplot(aes(x = health, y = as.numeric(value), fill = as.factor(health))) +
   geom_violin(trim = F) +
@@ -243,6 +245,6 @@ waha_slf.census4 %>%
   theme_bw() + 
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
 
-ggsave(here("figures/waha_slf_demo_violin.png"), width = 7, height = 6)
+# ggsave(here("figures/waha_slf_demo_violin.png"), width = 7, height = 6)
 ```
 
