@@ -20,6 +20,7 @@ library(rgdal)
 library(ggplot2)
 library(shiny)
 library(tmaptools)
+library(fuzzyjoin)
 
 # load API key for Cancensus. Replace with custom
 api_key <- readr::read_file(here("comparative", "census_api.txt"))
@@ -125,7 +126,7 @@ tribal <- read.csv(here("comparative", "tribal_council.csv"))
 ci_str_detect <- function(x, y){str_detect(x, regex(y, ignore_case = TRUE))}
 
 waha_slf.census3 <- fuzzy_left_join(waha_slf.census2, tribal, match_fun = ci_str_detect, by = c("name" = "community"))
-
+waha_slf.census4 <- waha_slf.census3
 # manual data entry
 waha_slf.census3 %>% select(name, community)
 
@@ -173,10 +174,12 @@ tm_shape(st_as_sf(waha_slf.census4)) +
 
 # Visualize governance structure (Tribal council)
 ```{r}
+tmap_mode("view")
 tm_shape(st_as_sf(waha_slf.census4)) +
   tm_dots(col = "tribal_council",
           id = c("name"),
           size = 0.07) +
+  tm_scale_bar() +
   tm_shape(waha_bb) + tm_borders() +
   tm_shape(slf_bb) + tm_borders()
 ```

@@ -1,0 +1,113 @@
+---
+title: "FCM"
+output: html_document
+---
+
+# Introduction
+Workflow for preliminary Fuzzy Cognitive Mapping of Operation Remote Immunity
+
+# Load libraries
+```{r}
+library(fcm)
+library(here)
+library (reshape2)
+library (ggplot2)
+library(dplyr)
+library(doParallel)
+library(doRNG)
+library(FCMapper)
+```
+
+# Preliminary Run
+## weight matrix
+```{r}
+prelim_WM <- read.csv(here("FCM/prelim_WM.csv"))
+
+# convert to matrix
+prelim_WM.mat <- prelim_WM[-1, c(-1,-2)]
+
+# assign name
+colnames(prelim_WM.mat) <- prelim_WM$Outcomes[-1]
+rownames(prelim_WM.mat) <- c()
+
+# assign nuermic
+prelim_WM.mat <- dplyr::mutate_all(prelim_WM.mat, function(x) as.numeric(as.character(x)))
+```
+
+## activation vector
+```{r}
+prelim_AV <- read.csv(here("FCM/prelim_AC.csv"))
+prelim_AV <- data.frame(t(prelim_AV))
+
+colnames(prelim_AV)<- prelim_WM$Outcomes[-1]
+rownames(prelim_AV) <- c()
+```
+
+## run inference
+```{r}
+## with default, 20 interation, Kosko inference rules, sigmoidal transformation, lambda = 1, e=0.001
+output <- fcm.infer(prelim_AV, prelim_WM.mat)
+output 
+```
+
+## visualization
+```{r}
+# assign iterations and values
+iterations <- as.numeric(rownames(output$values))  
+df <- data.frame(iterations, output$values)   
+df2 <- melt(df, id="iterations")   
+
+# focus on important concepts. Population size is a control for concept that should not change 
+df2 %>% filter(variable %in% c("dose_delivered", "dose_allocated", "dose_uptaken", "vaccine_hesistency", "population_size")) %>%
+ggplot(aes(x=iterations, y=value, group=variable, colour=variable)) +
+  geom_line(size = 0.7) + 
+  theme_bw()
+```
+
+## trying random starting points. Monte Carlo simulation
+It seems that under default setting and preliminary set up, no chaotic behaviour nor initial-condition dependency is observed!
+```{r error=FALSE, warning=FALSE, message=FALSE, results = "hide"}
+fcm_mc <- function(){
+  # generate random list of initial values
+  AV_rand <- data.frame(t(runif(32, 0, 1)))
+  colnames(AV_rand)<- prelim_WM$Outcomes[-1]
+  
+  # run inference
+  invisible(capture.output(res <- fcm.infer(AV_rand, prelim_WM.mat)))
+  return(res$values)
+}
+
+# parallelized, reproducible Monte Carlo simulation
+cl <- makeCluster(8)
+registerDoRNG(137)
+registerDoParallel(cl)
+fcm_mc_res <- foreach(i = 1:10000, .packages = "fcm") %dorng%{
+  fcm_mc()
+}
+
+# combine all dataframe
+fcm_mc.df <- bind_rows(fcm_mc_res, .id =  "iteration")
+
+# get equilibrium of each iteration. 
+fcm_mc.eq <- fcm_mc.df %>% 
+  group_by(iteration) %>% 
+  slice(n())
+
+fcm_mc.eq2 <- melt(fcm_mc.eq)
+
+# at 5 decimal place rounding, no difference between iterations!
+fcm_mc_eq.ls <- fcm_mc.eq2 %>% 
+  group_by(variable) %>% 
+  summarize(eq = unique(round(value, 5)))
+  
+```
+
+# Plot fuzy map
+```{r}
+
+graph.fcm(as.matrix(prelim_WM.mat), concept.sizes = fcm_mc_eq.ls, concept.names = names(prelim_WM.mat))
+```
+
+
+
+
