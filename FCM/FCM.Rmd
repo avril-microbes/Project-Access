@@ -59,7 +59,7 @@ df <- data.frame(iterations, output$values)
 df2 <- melt(df, id="iterations")   
 
 # focus on important concepts. Population size is a control for concept that should not change 
-df2 %>% filter(variable %in% c("dose_delivered", "dose_allocated", "dose_uptaken", "vaccine_hesistency", "population_size")) %>%
+df2 %>% filter(variable %in% c("dose_delivered", "dose_allocated", "dose_uptaken", "vaccine_hesistency", "extreme_weather")) %>%
 ggplot(aes(x=iterations, y=value, group=variable, colour=variable)) +
   geom_line(size = 0.7) + 
   theme_bw()
@@ -139,10 +139,10 @@ edge_color <- fcm.edgels %>%
 
 
 # get better layout
-
 layout <- layout.fruchterman.reingold(fcm.net, niter=5000, area = vcount(fcm.net)^4*10)
 
-png(here("FCM/figures/fcm_prelim.png"), width = 500, height = 500)
+# plot
+tiff(here("FCM/figures/fcm_prelim.tiff"), width = 1000, height = 1000, res = 120)
 plot(fcm.net, 
      edge.width = abs(E(fcm.net)$value)*3, 
      layout = layout,
@@ -156,24 +156,6 @@ plot(fcm.net,
      )
 dev.off()
 ```
-
-
-```{r}
-fcm.graph <- graph_from_adjacency_matrix(as.matrix(prelim_WM.mat2),
-                                    mode = "directed",
-                                    weighted = T)
-
-fcm.graph <- simplify(fcm.graph)
-
-# plot
-plot(fcm.graph, 
-     layout = layout.fruchterman.reingold, main = "fruchterman.reingold",
-     edge.color = E(fcm.graph)$weight+2,
-     edge.width = abs(E(fcm.graph)$weight)*3, 
-     edge.arrow.size = 0.4,
-     vertex.color = "blue")
-```
-
 
 
 
