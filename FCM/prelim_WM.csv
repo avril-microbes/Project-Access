@@ -1,13 +1,13 @@
 ,Outcomes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Outcomes,,dose_available,dose_allocated,dose_delivered,dose_uptaken,vaccine_stock,package_size,storage_condition,diluent,effectiveness,prioritization_matrix,dosage_estimation,quality_monitoring,extreme_weather,transport_condition,transport_capacity,courier_service,recc_flight,clinic,vaccine_hesistency,community_relation,sensitivity_training,uptake_track,site_director,scheduler,healthcare,military,speed_decision,hospital_control,participants,population_size,tribal_council,community_numbers
-,dose_available,0,1,0,0,0,0,0,0,0,0,0.75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,dose_available,dose_allocated,dose_delivered,dose_uptaken,vaccine_stock,package_size,storage_condition,diluent,effectiveness,prioritization_matrix,dosage_estimation,quality_monitoring,extreme_weather,transport_condition,transport_capacity,courier_service,recc_flight,clinic,vaccine_hesistency,community_relation,sensitivity_training,uptake_track,site_director,scheduler,healthcare,military,speed_decision,hospital_control,participants,population_size,tribal_council,community_numbers
+Outcomes,dose_available,0,1,0,0,0,0,0,0,0,0,0.75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 ,dose_allocated,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 ,dose_delivered,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 ,dose_uptaken,0,0,0,0,0,0,0,0,0,0,0.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 Product,vaccine_stock,1,0,0,0,0,0,0,0,0,0,0.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 ,package_size,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 ,storage_condition,0,0,0,0,0,0,0,0,0.75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-,diluent,0,0,0,0,0,1,0,1,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,diluent,0,0,0,0,0,1,0,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 ,effectiveness,0,0,0,0,0,0,0,0,0,0,-0.25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 Allocation,prioritization_matrix,0,1,0.75,0.25,0,0,0,0,0,0,0.75,0,0,0,0.25,0,0.5,0,0,0,0,0,1,0.75,0,0,0.25,0,0,0,0,0
 ,dosage_estimation,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0

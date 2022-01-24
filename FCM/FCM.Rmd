@@ -15,7 +15,8 @@ library (ggplot2)
 library(dplyr)
 library(doParallel)
 library(doRNG)
-library(FCMapper)
+library(ggnetwork)
+library(network)
 ```
 
 # Preliminary Run
@@ -62,6 +63,8 @@ df2 %>% filter(variable %in% c("dose_delivered", "dose_allocated", "dose_uptaken
 ggplot(aes(x=iterations, y=value, group=variable, colour=variable)) +
   geom_line(size = 0.7) + 
   theme_bw()
+
+ggsave(here("FCM/figures/prelim_equlibrium.png"), height = 5)
 ```
 
 ## trying random starting points. Monte Carlo simulation
@@ -102,10 +105,73 @@ fcm_mc_eq.ls <- fcm_mc.eq2 %>%
   
 ```
 
-# Plot fuzy map
+# Plot fuzzy cognitive map
 ```{r}
+# make adjacency matrix
+prelim_WM.mat2 <- prelim_WM.mat
+rownames(prelim_WM.mat2) <- names(prelim_WM.mat)
 
-graph.fcm(as.matrix(prelim_WM.mat), concept.sizes = fcm_mc_eq.ls, concept.names = names(prelim_WM.mat))
+# make edge list
+fcm.edgels <- melt(as.matrix(prelim_WM.mat2))
+
+
+# add on attributes
+fcm.edgels <- cbind(fcm.edgels, type = c(rep("Outcome", 4), rep("Product", 5), rep("Allocation", 2), rep("Delivery", 6), rep("Uptake", 5), rep("Human_resource", 3), rep("Leadership", 4), rep("Demographic", 3)))
+
+# get rid of 0 weights 
+fcm.edgels <- fcm.edgels %>% filter(value != 0)
+
+# get network object
+fcm.net <- graph.data.frame(fcm.edgels, directed = T)
+
+# get list of color for vertex
+color.ls <- scales::hue_pal()(8)
+
+color.df <- left_join(data.frame(type = E(fcm.net)$type), 
+          data.frame(type = unique(E(fcm.net)$type), color = color.ls))
+
+# compute degree
+deg <- degree(fcm.net, mode="all")
+
+# get list of color for edge
+edge_color <- fcm.edgels %>% 
+  mutate(edge_color = ifelse(value < 0, "red", "grey"))
+
+
+# get better layout
+
+layout <- layout.fruchterman.reingold(fcm.net, niter=5000, area = vcount(fcm.net)^4*10)
+
+png(here("FCM/figures/fcm_prelim.png"), width = 500, height = 500)
+plot(fcm.net, 
+     edge.width = abs(E(fcm.net)$value)*3, 
+     layout = layout,
+     edge.arrow.size = 0.4,
+     vertex.size = deg,
+     vertex.color = color.df$color,
+     vertex.label.font = 1,
+     vertex.label.color = "black",
+     vertex.frame.color = "transparent",
+     edge.color = edge_color$edge_color
+     )
+dev.off()
+```
+
+
+```{r}
+fcm.graph <- graph_from_adjacency_matrix(as.matrix(prelim_WM.mat2),
+                                    mode = "directed",
+                                    weighted = T)
+
+fcm.graph <- simplify(fcm.graph)
+
+# plot
+plot(fcm.graph, 
+     layout = layout.fruchterman.reingold, main = "fruchterman.reingold",
+     edge.color = E(fcm.graph)$weight+2,
+     edge.width = abs(E(fcm.graph)$weight)*3, 
+     edge.arrow.size = 0.4,
+     vertex.color = "blue")
 ```
 
 
